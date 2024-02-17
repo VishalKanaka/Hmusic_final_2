@@ -2,7 +2,6 @@ import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/react";
 import { RiMusic2Fill } from "react-icons/ri";
 import Layout from "../../components/Layout";
-import TracksTable from "../../components/TracksTable";
 import { Album } from "../../types/types";
 import { customGet } from "../../utils/customGet";
 import { isAuthenticated } from "../../utils/isAuthenticated";
@@ -46,7 +45,7 @@ export default function SingleAlbum({ album }: IProps) {
         )}
       </div>
 
-      <TracksTable tracks={album?.tracks.items} noAlbum />
+      
     </Layout>
   );
 }
