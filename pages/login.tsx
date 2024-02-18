@@ -12,7 +12,7 @@ export default function Login() {
       <div className="flex flex-col items-center justify-center w-screen h-screen gap-20">
         <Image
           src="/images/HMusic2.png"
-          alt="spotify logo"
+          alt="Hmusic logo"
           width={320}
           height={96}
           objectFit="contain"
