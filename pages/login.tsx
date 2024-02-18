@@ -8,7 +8,7 @@ export default function Login() {
   };
 
   return (
-    <Layout title="Log in to Spotify">
+    <Layout title="Log in to HMusic">
       <div className="flex flex-col items-center justify-center w-screen h-screen gap-20">
         <Image
           src="/images/HMusic2.png"
