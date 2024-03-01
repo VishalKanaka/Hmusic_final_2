@@ -41,9 +41,9 @@ export default function CardItem({
             <RiMusic2Fill className="w-full h-full bg-paper " />
           </div>
         )}
-        <h3 className="mt-5 font-bold truncate">{heading}</h3>
+        <h3 className="mt-5 text-lg font-bold truncate">{heading}</h3>
         {subheading && (
-          <h6 className="text-sm truncate text-gray">{subheading}</h6>
+          <h6 className="text-s truncate text-gray">{subheading}</h6>
         )}
       </div>
     </Link>

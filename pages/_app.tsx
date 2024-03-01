@@ -8,7 +8,7 @@ import Header from "../components/Header";
 import PreviewPlayer from "../components/PreviewPlayer";
 import Sidebar from "../components/Sidebar";
 import PlayerProvider from "../context/PlayerContext";
-import { SpotifyProvider } from "../context/SpotifyContext";
+import { MusicProvider } from "../context/MusicContext";
 import "../styles/globals.css";
 import "../styles/nonTailwind.css";
 
@@ -40,25 +40,26 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <SessionProvider session={pageProps.session}>
-      <SpotifyProvider>
+      <MusicProvider>
         <PlayerProvider>
           {router.pathname === "/login" ? (
             <Component {...pageProps} />
           ) : (
-            <div className="flex">
+            <>
               <Sidebar />
-              <div className="flex flex-col">
-                <Header />
-                <main className="mt-4 ml-2 mr-4">
+              <Header />
+              <div className="flex flex-col mr-80">
+                
+                <main className="mt-4 ml-2 mr-2">
                   <Component {...pageProps} />
                 </main>
               </div>
              
               <PreviewPlayer />
-            </div>
+              </>
           )}
         </PlayerProvider>
-      </SpotifyProvider>
+      </MusicProvider>
     </SessionProvider>
   );
 }

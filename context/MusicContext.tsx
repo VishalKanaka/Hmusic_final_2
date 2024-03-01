@@ -21,9 +21,9 @@ interface ContextProps {
   setTracksQueue: Dispatch<SetStateAction<Track[]>>;
 }
 
-const SpotifyContext = createContext({} as ContextProps);
+const MusicContext = createContext({} as ContextProps);
 
-export const SpotifyProvider = ({ children }: any) => {
+export const MusicProvider = ({ children }: any) => {
   const [playlists, setPlaylists] = useState<PlaylistType[]>([]);
   const [searchResults, setSearchResults] = useState<SearchResults | null>(
     null
@@ -52,7 +52,7 @@ export const SpotifyProvider = ({ children }: any) => {
   };
 
   return (
-    <SpotifyContext.Provider
+    <MusicContext.Provider
       value={{
         playlists,
         fetchPlaylists,
@@ -67,8 +67,8 @@ export const SpotifyProvider = ({ children }: any) => {
       }}
     >
       {children}
-    </SpotifyContext.Provider>
+    </MusicContext.Provider>
   );
 };
 
-export const useSpotify = () => useContext(SpotifyContext);
+export const useSpotify = () => useContext(MusicContext);

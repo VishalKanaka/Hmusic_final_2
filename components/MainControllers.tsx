@@ -30,7 +30,7 @@ export default function MainControllers() {
           onClick={togglePlay}
           className="flex items-center justify-center w-8 h-8 text-2xl text-black bg-white rounded-full focus:outline-none"
         >
-          {/* KMDK */}
+          
           {isPlaying ? <MdPause /> : <MdPlayArrow />}
         </button>
         <MdSkipNext className="text-xl text-gray" />

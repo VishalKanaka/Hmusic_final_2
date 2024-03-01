@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useSpotify } from "../context/SpotifyContext";
+import { useSpotify } from "../context/MusicContext";
 import { RiHome5Fill, RiHome5Line } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdList } from "react-icons/io";
@@ -24,16 +24,9 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="fixed top-0 right-0 w-64 h-full bg-black">
-      <div className="flex flex-col items-center h-full m-5 mt-5">
-        <Image
-          src="/images/HMusic1.png"
-          width={150}
-          height={50}
-          className="rounded-full"
-          objectFit="contain"
-          alt="Hmusic logo"
-        />
+    <aside className="fixed top-14  right-0 w-80 h-full bg-black">
+      <div className="flex flex-col text-xl items-center h-full m-5 mt-5">
+        
 
         <ul className="w-full mt-4">
           <Link href="/">
@@ -48,7 +41,7 @@ export default function Sidebar() {
                 ) : (
                   <RiHome5Line className="text-2xl" />
                 )}
-                <span className="font-bold">Home</span>
+                <span className="font-bold text-lg">Home</span>
               </li>
             </a>
           </Link>
@@ -62,7 +55,7 @@ export default function Sidebar() {
               >
                 <IoSearchOutline className="text-2xl" />
 
-                <span className="font-bold">Search</span>
+                <span className="font-bold text-lg">Search</span>
               </li>
             </a>
           </Link>
@@ -78,7 +71,7 @@ export default function Sidebar() {
                 } flex items-center gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
               >
                 <IoMdList className="text-2xl" />
-                <span className="font-bold">Your Library</span>
+                <span className="font-bold text-lg">Your Library</span>
               </li>
             </a>
           </Link>
@@ -99,7 +92,7 @@ export default function Sidebar() {
                   objectFit="contain"
                   alt="Liked playlist cover"
                 />
-                <span className="font-bold">Liked songs</span>
+                <span className="font-bold text-lg">Liked songs</span>
               </li>
             </a>
           </Link>
@@ -116,7 +109,7 @@ export default function Sidebar() {
               <a className="w-full">
                 <li
                   key={playlist.id}
-                  className="text-sm font-semibold truncate cursor-default hover:text-white"
+                  className="text-lg font-semibold truncate cursor-default hover:text-white"
                 >
                   {playlist.name}
                 </li>
