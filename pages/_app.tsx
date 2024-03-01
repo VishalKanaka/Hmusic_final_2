@@ -45,17 +45,18 @@ function MyApp({ Component, pageProps }: AppProps) {
           {router.pathname === "/login" ? (
             <Component {...pageProps} />
           ) : (
-            <div className="flex">
+            <>
               <Sidebar />
-              <div className="flex flex-col">
-                <Header />
-                <main className="mt-4 ml-2 mr-4">
+              <Header />
+              <div className="flex flex-col mr-64">
+                
+                <main className="mt-4 ml-2 mr-2">
                   <Component {...pageProps} />
                 </main>
               </div>
              
               <PreviewPlayer />
-            </div>
+              </>
           )}
         </PlayerProvider>
       </SpotifyProvider>

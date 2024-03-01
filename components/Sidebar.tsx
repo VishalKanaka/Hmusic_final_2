@@ -24,16 +24,9 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="fixed top-0 right-0 w-64 h-full bg-black">
+    <aside className="fixed top-14 right-0 w-64 h-full bg-black">
       <div className="flex flex-col items-center h-full m-5 mt-5">
-        <Image
-          src="/images/HMusic1.png"
-          width={150}
-          height={50}
-          className="rounded-full"
-          objectFit="contain"
-          alt="Hmusic logo"
-        />
+        
 
         <ul className="w-full mt-4">
           <Link href="/">
@@ -62,7 +55,7 @@ export default function Sidebar() {
               >
                 <IoSearchOutline className="text-2xl" />
 
-                <span className="font-bold">Search</span>
+                <span className="font-bold ">Search</span>
               </li>
             </a>
           </Link>

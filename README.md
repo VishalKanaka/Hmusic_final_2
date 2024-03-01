@@ -18,11 +18,4 @@ new releases and popular playlist carditems
 username: vamshipeesari08@gmail.com
 password: reactmelodies2024
 
-# .env
-
-SPOTIFY_CLIENT_ID = "a9764733eb644856bca9906179c44358"
-SPOTIFY_CLIENT_SECRET = "bf5c7fbf54674aefbc4120170a52b457"
-NEXTAUTH_SECRET = vamshi
-NEXTAUTH_URL = http://localhost:3000/
-
 ![image](https://github.com/2024-Winter-ITE-5425-0NA/project-react-client-reactmelodies/assets/113646080/d47cc521-d550-4000-b8a1-38c5cb5ad26e)
