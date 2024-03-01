@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <>
               <Sidebar />
               <Header />
-              <div className="flex flex-col mr-80">
+              <div className="flex flex-col mr-64">
                 
                 <main className="mt-4 ml-2 mr-2">
                   <Component {...pageProps} />

@@ -24,8 +24,8 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="fixed top-14  right-0 w-80 h-full bg-black">
-      <div className="flex flex-col text-xl items-center h-full m-5 mt-5">
+    <aside className="fixed top-14 right-0 w-64 h-full bg-black">
+      <div className="flex flex-col items-center h-full m-5 mt-5">
         
 
         <ul className="w-full mt-4">
@@ -55,7 +55,7 @@ export default function Sidebar() {
               >
                 <IoSearchOutline className="text-2xl" />
 
-                <span className="font-bold text-lg">Search</span>
+                <span className="font-bold ">Search</span>
               </li>
             </a>
           </Link>

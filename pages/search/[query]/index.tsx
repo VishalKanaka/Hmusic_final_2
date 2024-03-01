@@ -3,7 +3,7 @@ import { getSession } from "next-auth/react";
 import Link from "next/link";
 import { Fragment } from "react";
 import AlbumList from "../../../components/AlbumList";
-//import ArtistList from "../../../components/ArtistList";
+import ArtistList from "../../../components/ArtistList";
 import Heading from "../../../components/Heading";
 import Layout from "../../../components/Layout";
 import PlaylistList from "../../../components/PlaylistList";
@@ -100,7 +100,7 @@ export default function Search({ query, searchResults }: IProps) {
                   <Heading text="Artists" />
                 </a>
               </Link>
-              
+              <ArtistList artists={searchResults.artists.items.slice(0, 6)} /> 
             </div>
           )}
 
