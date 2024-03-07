@@ -86,3 +86,15 @@ export interface SearchResults {
     items: Track[];
   };
 }
+
+export interface CreatePlaylist {
+ 
+  collaborative?: boolean;
+ 
+  description?: string;
+
+  name: string;
+ 
+  public?: boolean;
+  [property: string]: any;
+}

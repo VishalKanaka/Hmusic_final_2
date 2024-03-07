@@ -4,8 +4,11 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useSpotify } from "../context/MusicContext";
 import { RiHome5Fill, RiHome5Line } from "react-icons/ri";
+import { GrAddCircle } from "react-icons/gr";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdList } from "react-icons/io";
+import { IoIosAddCircleOutline } from "react-icons/io";
+
 
 const activeLink = "bg-[#282828] text-white";
 const inactiveLink = "bg-transparent text-gray";
@@ -72,6 +75,23 @@ export default function Sidebar() {
               >
                 <IoMdList className="text-2xl" />
                 <span className="font-bold text-lg">Your Library</span>
+              </li>
+            </a>
+          </Link>
+          <Link href="/Create/playlist">
+            <a>
+              <li
+                className={`${
+                  router.pathname.includes("/collection") &&
+                  !router.pathname.includes("tracks")
+                    ? activeLink
+                    : inactiveLink
+                } flex items-center gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
+              >
+                
+                <IoIosAddCircleOutline  className="text-2xl "/>
+
+                <span className="font-bold text-lg">Create Playlist</span>
               </li>
             </a>
           </Link>
