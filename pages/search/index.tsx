@@ -9,7 +9,7 @@ import { isAuthenticated } from "../../utils/isAuthenticated";
 
 export default function Search({ categories }) {
   return (
-    <Layout title="Spotify - Search">
+    <Layout title="HMusic - Search">
       <Heading text="Browse Categories" />
 
       <CardItemGrid>

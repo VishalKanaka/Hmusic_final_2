@@ -13,7 +13,7 @@ interface IProps {
 
 export default function Albums({ albums }: IProps) {
   return (
-    <Layout title="Spotify - Your Library">
+    <Layout title="HMusic - Your Library">
       <Heading text="Albums" />
       <AlbumList albums={albums} />
     </Layout>

@@ -71,4 +71,4 @@ export const MusicProvider = ({ children }: any) => {
   );
 };
 
-export const useSpotify = () => useContext(MusicContext);
+export const useMusic = () => useContext(MusicContext);

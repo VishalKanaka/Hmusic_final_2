@@ -7,7 +7,7 @@ import ArtistList from "../../../components/ArtistList";
 import Heading from "../../../components/Heading";
 import Layout from "../../../components/Layout";
 import PlaylistList from "../../../components/PlaylistList";
-import { useSpotify } from "../../../context/MusicContext";
+import { useMusic } from "../../../context/MusicContext";
 import { SearchResults, Track } from "../../../types/types";
 import { customGet } from "../../../utils/customGet";
 import { fmtMSS } from "../../../utils/formatDuration";
@@ -19,7 +19,7 @@ interface IProps {
 }
 
 export default function Search({ query, searchResults }: IProps) {
-  const { setCurrentTrack } = useSpotify();
+  const { setCurrentTrack } = useMusic();
 
   const playTrack = (track: Track) => {
     if (track.preview_url) {
@@ -28,7 +28,7 @@ export default function Search({ query, searchResults }: IProps) {
   };
 
   return (
-    <Layout title="Spotify - Search">
+    <Layout title="HMusic - Search">
       {searchResults && (
         <>
           <div className="mt-5">

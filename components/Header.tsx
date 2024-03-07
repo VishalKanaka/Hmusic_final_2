@@ -2,7 +2,7 @@ import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdLogout, MdNavigateBefore, MdNavigateNext } from "react-icons/md";
-import { useSpotify } from "../context/MusicContext";
+import { useMusic } from "../context/MusicContext";
 import { MySession } from "../types/types";
 import CollectionTabs from "./CollectionTabs";
 import Image from "next/image";
@@ -15,7 +15,7 @@ interface UseSession {
 export default function Header() {
   const router = useRouter();
   const { data: session }: UseSession = useSession();
-  const { setCurrentTrack } = useSpotify();
+  const { setCurrentTrack } = useMusic();
 
   const logout = () => {
     setCurrentTrack(null);

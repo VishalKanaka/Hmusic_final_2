@@ -15,7 +15,7 @@ interface IProps {
 
 export default function Playlist({ playlist }: IProps) {
   return (
-    <Layout title={`Spotify - ${playlist?.name}`}>
+    <Layout title={`HMusic - ${playlist?.name}`}>
       <div className="flex items-end gap-6">
         {playlist && (
           <>
