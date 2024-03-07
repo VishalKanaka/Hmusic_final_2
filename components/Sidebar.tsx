@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useSpotify } from "../context/MusicContext";
+import { useMusic } from "../context/MusicContext";
 import { RiHome5Fill, RiHome5Line } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdList } from "react-icons/io";
@@ -13,7 +13,7 @@ const inactiveLink = "bg-transparent text-gray";
 export default function Sidebar() {
   const router = useRouter();
 
-  const { playlists, fetchPlaylists } = useSpotify();
+  const { playlists, fetchPlaylists } = useMusic();
 
   useEffect(() => {
     fetchPlaylists();

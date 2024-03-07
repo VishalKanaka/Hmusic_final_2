@@ -15,7 +15,7 @@ export default function LikedTracks({ likedTracks }: IProps) {
   const { data: session }: { data: MySession } = useSession();
 
   return (
-    <Layout title="Spotify - Liked Songs">
+    <Layout title="HMusic - Liked Songs">
       {likedTracks && (
         <>
           <div className="flex items-end gap-6">

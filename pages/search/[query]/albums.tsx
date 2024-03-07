@@ -18,7 +18,7 @@ interface IProps {
 
 export default function SearchAlbums({ query, searchAlbums }: IProps) {
   return (
-    <Layout title="Music - Search">
+    <Layout title="HMusic - Search">
       <Heading text={`All albums for "${query}"`} />
       <AlbumList albums={searchAlbums.albums.items} />
     </Layout>

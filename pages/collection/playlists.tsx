@@ -5,7 +5,7 @@ import CardItem from "../../components/CardItem";
 import CardItemGrid from "../../components/CardItemGrid";
 import Heading from "../../components/Heading";
 import Layout from "../../components/Layout";
-import { useSpotify } from "../../context/MusicContext";
+import { useMusic } from "../../context/MusicContext";
 import { PlaylistType } from "../../types/types";
 import { customGet } from "../../utils/customGet";
 import { isAuthenticated } from "../../utils/isAuthenticated";
@@ -15,10 +15,10 @@ interface IProps {
 }
 
 export default function UserPlaylists({ likedTracks }: IProps) {
-  const { playlists } = useSpotify();
+  const { playlists } = useMusic();
 
   return (
-    <Layout title="Spotify - Your Library">
+    <Layout title="HMusic - Your Library">
       <Heading text="Playlists" />
       <CardItemGrid>
         <Link href="/collection/tracks" passHref>

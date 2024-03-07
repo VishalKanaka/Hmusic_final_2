@@ -10,7 +10,7 @@ import { isAuthenticated } from "../utils/isAuthenticated";
 
 export default function Home({ newReleases, featuredPlaylists }) {
   return (
-    <Layout title="Welcome to Hmusic">
+    <Layout title="Welcome to HMusic">
      
 
       <Heading text="New releases" className="mt-10" />
