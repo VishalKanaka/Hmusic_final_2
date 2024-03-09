@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMusic } from "../context/MusicContext";
 import { RiHome5Fill, RiHome5Line } from "react-icons/ri";
 import { GrAddCircle } from "react-icons/gr";
@@ -15,6 +15,15 @@ const inactiveLink = "bg-transparent text-gray";
 
 export default function Sidebar() {
   const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control the visibility of the modal
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const { playlists, fetchPlaylists } = useMusic();
 
@@ -78,8 +87,8 @@ export default function Sidebar() {
               </li>
             </a>
           </Link>
-          <Link href="/Createplaylist/index">
-            <a>
+          <Link href="/createplaylist">
+            <a onClick={openModal}>
               <li
                 className={`
                   
