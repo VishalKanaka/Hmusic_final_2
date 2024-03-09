@@ -1,4 +1,4 @@
-import { signOut, useSession } from "next-auth/react";
+import { signOut,getSession, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdLogout, MdNavigateBefore, MdNavigateNext } from "react-icons/md";
@@ -17,9 +17,17 @@ export default function Header() {
   const { data: session }: UseSession = useSession();
   const { setCurrentTrack } = useMusic();
 
-  const logout = () => {
-    setCurrentTrack(null);
-    signOut({ callbackUrl: "http://localhost:3000/login" });
+  const logout = async () => {
+    try {
+      
+      await signOut({ callbackUrl: "/" });
+        localStorage.removeItem("session");
+       
+        router.push("/");
+      } 
+    catch (error) {
+      console.error("Error during logout:", error);
+    }
   };
 
   if (router.pathname === "/login") {

@@ -2,16 +2,20 @@
 
 Nextauth spotify configuration
 backend endpoints
+your library
+mongo db authorization
 
 # Vamshi:
 
 sidebar and header Userinterface
 display playlist in sidebar
+search content
 
 # Harshitha:
 
 Homepage main content Userinterface
 new releases and popular playlist carditems
+liked songs
 
 # credentials
 

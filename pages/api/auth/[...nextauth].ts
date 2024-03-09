@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
 
-
+import { signOut } from "next-auth/react";
 
 
 const scope =
@@ -31,6 +31,7 @@ export default NextAuth({
       session.user = token;
       return session;
     },
+    
     
   },
   

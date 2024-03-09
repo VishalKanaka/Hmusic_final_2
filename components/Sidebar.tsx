@@ -78,15 +78,12 @@ export default function Sidebar() {
               </li>
             </a>
           </Link>
-          <Link href="/Create/playlist">
+          <Link href="/Createplaylist/index">
             <a>
               <li
-                className={`${
-                  router.pathname.includes("/collection") &&
-                  !router.pathname.includes("tracks")
-                    ? activeLink
-                    : inactiveLink
-                } flex items-center gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
+                className={`
+                  
+               flex items-center gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
               >
                 
                 <IoIosAddCircleOutline  className="text-2xl "/>
