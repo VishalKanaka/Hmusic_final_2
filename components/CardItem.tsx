@@ -27,7 +27,7 @@ export default function CardItem({
   return (
     <Link href={`/${type}/${id}`} passHref>
       <div className="transition duration-300 p-4 rounded cursor-pointer hover:bg-[#282828] bg-paper">
-        {images.length > 0 ? (
+        {Array.isArray(images) && images.length > 0 ? (
           <img
             src={images[0].url}
             alt={altTitle}

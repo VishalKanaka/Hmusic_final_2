@@ -20,7 +20,7 @@ export default function Login() {
       });
       console.log(response.statusText);
       if (response.ok) {
-        const sessionIdentifier = "12$#76"; // Replace with actual session identifier
+        const sessionIdentifier = "13$#76"; 
       localStorage.setItem("session", sessionIdentifier); 
         await signIn("spotify", { callbackUrl: "/" });
         router.push("/"); 
